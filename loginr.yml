@@ -1,0 +1,41 @@
+# OPTIONS
+#
+# die_on_error: Bail out if there are any errors that look like
+#               network issues. Defaults to false.
+#
+# user_agent: Browser user agent that the script will use. FOR YOUR
+#             OWN SAFETY, you should set this to match the browser
+#             that you normally browse your sites with. Note that the
+#             program will exit immediately if this option is not set.
+#             If you're not sure what your user agent is, go to
+#             http://whatismybrowser.com and look on the bottom
+#             of the page. Paste the resulting text.
+#
+# SITE DEFINITIONS
+# Commented out options are defaults.
+#
+# Form: Array index of the form on the login page containing the
+#       login boxes. Defaults to 0 (first form).
+#
+# Username/password fields: The name of the field element for the
+#                           username and password. Defaults to
+#                           'username' and 'password'.
+#
+# Check: If set, text that must be on the page after submitting
+#        a login to be considered successful.  Defaults to none.
+#
+# Credentials: The actual username and password for the site. The
+#              first item is the username, the second is the password.
+options:
+  die_on_error: false
+  user_agent: 
+sites:
+  - somerandomwebsite:
+      login_url: https://example.com/login.aspx
+      credentials:
+        - DrRobotnik
+        - SnooPingasUsualISee
+      #form: 0
+      #username_field: username
+      #password_field: password
+      #check:
